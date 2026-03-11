@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Boas Vindas</title>
+    <style>
+        body {
+            font: normal 15pt Arial;
+        }
+
+        button {
+            padding: 40px;
+            text-align: center;
+            border-radius: 5%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio Boas Vindas</h1>   
+    <div id="botao">
+        <button onclick="inicio()">Iniciar</button>
+    </div>
+
+    <script>
+        function inicio() {
+            var nome = window.prompt('Qual é o seu nome? ')
+            window.alert(`Olá, ${nome}! É um prazer em te conhecer!`)
+        } 
+    </script>
+</body>
+</html>
