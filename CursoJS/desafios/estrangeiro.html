@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font: normal 1.3em Arial;
+        }
+
+        input {
+            border: solid 1px black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistemas de Nacionalidades</h1>
+    De que país você é: <input type="text" name="txtna" id="txtna">
+    <input type="button" value="Verificar" onclick="país()">
+    <div id="res">
+
+    </div>
+    <script>
+        function país() {
+            var nac = window.document.querySelector('input#txtna')
+            var res = window.document.querySelector('div#res') 
+            var lugar = (nac.value)
+            res.innerHTML = `<p>Você nasceu no(a) <strong>${lugar}</strong>!</p>`
+            if (lugar != 'Brasil') {
+                res.innerHTML += `<p>Você é Estrangeiro!</p>`
+            } else {
+                res.innerHTML += `<p>Você é Brasileiro!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
